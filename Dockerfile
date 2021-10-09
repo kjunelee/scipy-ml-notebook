@@ -51,7 +51,7 @@ RUN chmod -R +x /usr/share/datahub/tests/scipy-ml-notebook && \
 
 RUN ln -s /usr/local/nvidia/bin/nvidia-smi /opt/conda/bin/nvidia-smi
 
-RUN echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.mujoco/mjpro150/bin' >> ~/.bashrc
+RUN echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jovyan/.mujoco/mjpro150/bin' >> ~/.bashrc
 RUN chmod -R 777 /opt/conda/lib/python3.8/site-packages/mujoco_py/
 
 RUN mkdir ~/.mujoco

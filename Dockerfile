@@ -41,10 +41,6 @@ RUN pip install --no-cache-dir  datascience \
 								gym==0.10.5 \
 								mujoco-py==1.50.1.56
 
-# torch must be installed separately since it requires a non-pypi repo. See stable version above
-RUN pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 pytorch-ignite -f https://download.pytorch.org/whl/torch_stable.html;
-#RUN conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-
 RUN	chown -R 1000:1000 /home/jovyan
 
 COPY ./tests/ /usr/share/datahub/tests/scipy-ml-notebook

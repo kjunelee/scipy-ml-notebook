@@ -18,9 +18,11 @@ RUN apt-get install -y libosmesa6-dev libgl1-mesa-glx libglfw3
 #			nvidia-cuda-toolkit
 
 #RUN conda install cudatoolkit=10.2 \
-RUN conda install cudatoolkit=10.1 \
-				  cudatoolkit-dev=10.1\
-				  cudnn=7.6.5 \
+#RUN conda install cudatoolkit=10.1 \
+#				  cudatoolkit-dev=10.1\
+#				  cudnn=7.6.5 \
+RUN conda install pytorch torchvision torchaudio cudatoolkit=11.2 -c pytorch \
+				  cudnn=8.1.0 \
 				  nccl \
 				  -y
 
@@ -34,7 +36,7 @@ RUN pip install --no-cache-dir  datascience \
 								opencv-python \
 								pycocotools \
 								"pillow<7" \
-								tensorflow-gpu==2.3 \
+								tensorflow-gpu==2.6 \
 								gym==0.10.5 \
 								mujoco-py==1.50.1.56
 

@@ -2,10 +2,6 @@ FROM ucsdets/datahub-base-notebook:2021.3.1
 
 USER root
 
-# tensorflow, pytorch stable versions
-# https://pytorch.org/get-started/previous-versions/
-# https://www.tensorflow.org/install/source#linux
-
 RUN apt-get update && \
 	apt-get install -y \
 			libtinfo5 

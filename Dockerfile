@@ -18,8 +18,7 @@ RUN apt-get install -y libosmesa6-dev libgl1-mesa-glx libglfw3
 #				  cudatoolkit-dev=10.1\
 #				  cudnn=7.6.5 \
 RUN conda install pytorch torchvision torchaudio cudatoolkit=11.2 -c pytorch
-RUN conda install cudatoolkit=11.2 \
-				  cudnn=8.1.0 \
+RUN conda install cudnn=8.1.0 \
 				  nccl \
 				  -y
 
